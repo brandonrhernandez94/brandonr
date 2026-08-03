@@ -177,9 +177,7 @@ header > div:last-child {
   color: var(--azul-claro);
 }
 
-/* -------------------------------------
-   Sección "Sobre mí" (bio)
-------------------------------------- */
+
 main > section {
   padding: 60px 20px;
   background: var(--azul-oscuro);
