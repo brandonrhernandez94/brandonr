@@ -1,41 +1,201 @@
+/* -------------------------------------
+   Paleta de azules
+------------------------------------- */
 :root {
-    --bakcground: #0a0a0f;
-    --titles: #213fc4;
-    --textos: #f8fafc;
+  --azul-oscuro: #0A1930;
+  --azul-medio: #14335C;
+  --azul-principal: #1E5FA8;
+  --azul-claro: #4C9FE8;
+  --azul-brillante: #7FCBFF;
+  --texto-claro: #E8F2FF;
+  --texto-muted: #9DBCE0;
 }
 
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+* {
+  box-sizing: border-box;
 }
 
-.hero__img {
-     object-position: center top; 
-    width: 300px;
-    height: 300px;
-   object-fit: cover;
+body {
+  margin: 0;
+  background: var(--azul-oscuro);
+  color: var(--texto-claro);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--azul-brillante);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--texto-claro);
+}
+
+/* -------------------------------------
+   Header
+------------------------------------- */
+header {
+  background: var(--azul-medio);
+  border-bottom: 2px solid var(--azul-principal);
+  padding: 20px 0;
+}
+
+.inicioo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo2 {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.logo2 ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo2 ul li a {
+  color: var(--texto-claro);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.logo2 ul li a:hover {
+  background: var(--azul-principal);
+  color: #fff;
+}
+
+.name {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--azul-brillante);
+  letter-spacing: 0.04em;
+}
+
+.portada {
+  display: block;
+  margin: 20px auto 0;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
   border-radius: 50%;
-   text-shadow: blue 0px 0px 30px;
-   
-    
-    
+  border: 3px solid var(--azul-claro);
+  box-shadow: 0 0 20px rgba(76, 159, 232, 0.4);
 }
 
-h1 {
-    color: var(--titles);
-    font-size: 3rem;
+/* -------------------------------------
+   Secciones (habilidades y estudios)
+------------------------------------- */
+.section,
+.section2 {
+  padding: 60px 20px;
 }
 
-.hero__text {
-    color: blue;
-    font-size: 2.2rem;
-    
-
+.section {
+  background: var(--azul-oscuro);
 }
 
+.section2 {
+  background: var(--azul-medio);
+}
 
+.habilidades,
+.estudio1 {
+  max-width: 700px;
+  margin: 0 auto;
+}
 
+.section_title,
+.section-title {
+  color: var(--azul-brillante);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 24px;
+  border-left: 4px solid var(--azul-principal);
+  padding-left: 12px;
+}
+
+.section_content,
+.section02 {
+  background: rgba(30, 95, 168, 0.15);
+  border: 1px solid var(--azul-principal);
+  border-radius: 8px;
+  padding: 24px 28px;
+}
+
+.list1,
+.list2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list1 li,
+.list2 li {
+  position: relative;
+  padding: 10px 0 10px 24px;
+  color: var(--texto-muted);
+  border-bottom: 1px solid rgba(76, 159, 232, 0.2);
+}
+
+.list1 li:last-child,
+.list2 li:last-child {
+  border-bottom: none;
+}
+
+.list1 li::before,
+.list2 li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--azul-claro);
+}
+
+/* -------------------------------------
+   Footer
+------------------------------------- */
+footer {
+  background: var(--azul-medio);
+  border-top: 2px solid var(--azul-principal);
+  padding: 20px;
+  text-align: center;
+  color: var(--texto-muted);
+  font-size: 0.85rem;
+}
+
+/* -------------------------------------
+   Responsive
+------------------------------------- */
+@media (max-width: 600px) {
+  .logo2 {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo2 ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 1.3rem;
+  }
+}

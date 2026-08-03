@@ -1,56 +1,249 @@
+/* -------------------------------------
+   Paleta de azules
+------------------------------------- */
 :root {
-    --bakcground: #0a0a0f;
-    --titles: #8b5cf6;
-    --textos: #f8fafc;
+  --azul-oscuro: #0A1930;
+  --azul-medio: #14335C;
+  --azul-principal: #1E5FA8;
+  --azul-claro: #4C9FE8;
+  --azul-brillante: #7FCBFF;
+  --texto-claro: #E8F2FF;
+  --texto-muted: #9DBCE0;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html {
-    font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--bakcground);
-    color: white;
-
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-main {
-    flex: 1;
-}
-.menu {
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin: 0;
+  background: var(--azul-oscuro);
+  color: var(--texto-claro);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.5;
 }
 
-.menu__list {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-.menu__link {
-    text-decoration: none;
-    color: var(--titles);
-    font-size: 2rem;
+a {
+  color: var(--azul-brillante);
+  text-decoration: none;
 }
 
+a:hover {
+  color: var(--texto-claro);
+}
 
-.menu__logo{
-    width: 50px;
+/* -------------------------------------
+   Header
+------------------------------------- */
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px 32px;
+  background: linear-gradient(135deg, var(--azul-medio), var(--azul-oscuro));
+  border-bottom: 2px solid var(--azul-principal);
+  padding: 20px 40px;
+}
+
+.inicioo {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+.logo2 {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.logo2 ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo2 ul li a {
+  color: var(--texto-claro);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.logo2 ul li a:hover {
+  background: var(--azul-principal);
+  color: #fff;
+}
+
+.name {
+  grid-column: 1;
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--azul-brillante);
+  letter-spacing: 0.04em;
+  background: linear-gradient(90deg, var(--azul-brillante), var(--azul-claro));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+header > div:last-child {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: end;
+}
+
+.portada {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--azul-claro);
+  box-shadow: 0 0 20px rgba(76, 159, 232, 0.4);
+}
+
+/* -------------------------------------
+   Secciones (habilidades y estudios)
+------------------------------------- */
+.section,
+.section2 {
+  padding: 60px 20px;
+}
+
+.section {
+  background: var(--azul-oscuro);
+}
+
+.section2 {
+  background: var(--azul-medio);
+}
+
+.habilidades,
+.estudio1 {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section_title,
+.section-title {
+  color: var(--azul-brillante);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 24px;
+  border-left: 4px solid var(--azul-principal);
+  padding-left: 12px;
+}
+
+.section_content,
+.section02 {
+  background: rgba(30, 95, 168, 0.15);
+  border: 1px solid var(--azul-principal);
+  border-radius: 8px;
+  padding: 24px 28px;
+}
+
+.list1,
+.list2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list1 li,
+.list2 li {
+  position: relative;
+  padding: 10px 0 10px 24px;
+  color: var(--texto-muted);
+  border-bottom: 1px solid rgba(76, 159, 232, 0.2);
+}
+
+.list1 li:last-child,
+.list2 li:last-child {
+  border-bottom: none;
+}
+
+.list1 li::before,
+.list2 li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--azul-claro);
+}
+
+/* -------------------------------------
+   Sección "Sobre mí" (bio)
+------------------------------------- */
+main > section {
+  padding: 60px 20px;
+  background: var(--azul-oscuro);
+}
+
+main > section > nav {
+  display: block;
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(30, 95, 168, 0.15);
+  border: 1px solid var(--azul-principal);
+  border-left: 4px solid var(--azul-brillante);
+  border-radius: 8px;
+  padding: 28px 32px;
+  color: var(--texto-claro);
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 
 footer {
-    background-color: rgb(161, 161, 161);
-    padding: 10px;
-    text-align: center;
+  background: var(--azul-medio);
+  border-top: 2px solid var(--azul-principal);
+  padding: 20px;
+  text-align: center;
+  color: var(--texto-muted);
+  font-size: 0.85rem;
 }
 
+
+@media (max-width: 600px) {
+  header {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .name {
+    grid-column: 1;
+    text-align: center;
+  }
+
+  header > div:last-child {
+    grid-column: 1;
+    justify-self: center;
+  }
+
+  .logo2 {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo2 ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 1.3rem;
+  }
+}
