@@ -94,9 +94,8 @@ header {
 }
 
 header > div:last-child {
-  grid-column: 2;
-  grid-row: 2;
-  justify-self: end;
+  
+justify-self: end;
 }
 
 .portada {
@@ -208,18 +207,18 @@ footer {
 
 @media (max-width: 600px) {
   header {
-    grid-template-columns: 1fr;
+    
     padding: 20px;
     text-align: center;
   }
 
   .name {
-    grid-column: 1;
+    
     text-align: center;
   }
 
   header > div:last-child {
-    grid-column: 1;
+    
     justify-self: center;
   }
 
