@@ -14,12 +14,10 @@
 }
 
 body {
-  margin: 0;
-  background: var(--azul-oscuro);
-  color: var(--texto-claro);
-  font-family: 'Segoe UI', Arial, sans-serif;
-  line-height: 1.5;
-}
+    font-family: Arial, sans-serif;
+    background: #0a1628;
+    color: white;
+  }
 
 a {
   color: var(--azul-brillante);
@@ -84,7 +82,7 @@ header {
 
 .name {
   grid-column: 1;
-  text-align: left;
+  text-align: center;
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--azul-brillante);
